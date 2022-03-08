@@ -121,7 +121,7 @@ export const DataProvider = (
 
         return {
             data: normalizeData(data),
-            total: data.meta.pagination.total,
+            total: data.meta.pagination?data.meta.pagination.total:data.length,
         };
     },
 
